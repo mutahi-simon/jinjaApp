@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%  static 'css/styles.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Java Class {% endblock %}</title>
+</head>
+<body>
+
+<header>
+    <h1> Java class </h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">home</a></li>
+            <li><a href="{% url 'about' %}">about</a></li>
+            <li><a href="{% url 'contact' %}">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+<footer>
+    <p>&copy; 2024 simonking</p>
+</footer>
+
+</body>
+</html>
